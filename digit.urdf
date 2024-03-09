@@ -31,7 +31,7 @@
             <inertia ixx="0.375905" iyy="0.344193" izz="0.098732" ixy="-8.8e-05" ixz="0.0085" iyz="6.6e-05"/>
         </inertial>
         <visual name="base-0">
-            <origin xyz="0 0 0" rpy="-0 0 -0"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>
                 <mesh filename="obj/torso.obj"/>
             </geometry>
@@ -66,14 +66,14 @@
             <material name="blue"/>
         </visual>
         <collision>
-            <origin xyz="0.008 0 0.21" rpy="-0 0 -0"/>
+            <origin xyz="0.008 0 0.21" rpy="0 0 0"/>
             <geometry>
                 <box size="0.0975 0.087 0.245"/>
             </geometry>
             <material name="blue"/>
         </collision>
         <collision>
-            <origin xyz="0.02 0 0.49" rpy="-0 0 -0"/>
+            <origin xyz="0.02 0 0.49" rpy="0 0 0"/>
             <geometry>
                 <cylinder radius="0.05" length="0.0325"/>
             </geometry>
@@ -119,7 +119,7 @@
             <inertia ixx="0.011533" iyy="0.033345" izz="0.033958" ixy="-0.000171" ixz="0.000148" iyz="0.000178"/>
         </interial>
         <visual>
-            <origin xyz="0 0 0" rpy="0 0 2.35619"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>
                 <mesh filename="obj/hip-pitch.obj"/>
             </geometry>
@@ -141,26 +141,6 @@
             <origin xyz="0.06 0 -0.04" rpy="-0 0 -0"/>
             <geometry>
                 <box size="0.06 0.05 0.072"/>
-            </geometry>
-        </collision>
-    </link>
-
-    <link name="left-achilles-rod_link">
-        <interial>
-            <origin xyz="0.2506 0 0" rpy="0 0 0"/>
-            <mass value="0.178148"/>
-            <inertia ixx="3e-06" iyy="0.004501" izz="0.004501" ixy="0" ixz="0" iyz="0"/>
-        </interial>
-        <visual>
-            <origin xyz="0 0 0" rpy="0 0 0"/>
-            <geometry>
-                <mesh filename="obj/achilles-rod.obj"/>
-            </geometry>
-        </visual>
-        <collision>
-            <origin xyz="0.25 0 0" rpy="0.0698132 1.5708 0"/>
-            <geometry>
-                <capsule radius="0.007" length="0.25"/>
             </geometry>
         </collision>
     </link>
@@ -194,13 +174,13 @@
             <material name="blue"/>
         </visual>
         <collision>
-            <origin xyz="0.23 0 0" rpy="0 1.5708 0"/>
+            <origin xyz="0.23 0 0" rpy="-0.0 1.5707963267948966 0.0"/>
             <geometry>
                 <cylinder radius="0.03" length="0.1715"/>
             </geometry>
         </collision>
         <collision>
-            <origin xyz="0.125 0.009 0" rpy="1.5708 1.46608 0"/>
+            <origin xyz="0.125 0.009 0" rpy="1.5707963267948968 5.551115123125783e-17 1.466076571675237"/>
             <geometry>
                 <cylinder radius="0.05" length="0.1"/>
             </geometry>
@@ -221,13 +201,13 @@
             <material name="light-gray"/>
         </visual>
         <collision>
-            <origin xyz="0.21 -0.03 0" rpy="0 1.5708 0"/>
+            <origin xyz="0.21 -0.03 0" rpy="-0.0 1.5707963267948966 0.0"/>
             <geometry>
                 <capsule radius="0.02" length="0.18"/>
             </geometry>
         </collision>
         <collision>
-            <origin xyz="-0.07 -0.012 0" rpy="0.0872665 0 1.13446"/>
+            <origin xyz="-0.07 -0.012 0" rpy="0.03695747152466595 -0.07907230157157948 1.1330019296789948"/>
             <geometry>
                 <box size="0.007 0.07 0.03"/>
             </geometry>
@@ -264,26 +244,6 @@
         </visual>
     </link>
 
-    <link name="left-toe-A-rod_link">
-        <inertial>
-            <origin xyz="0.171071 0 0" rpy="0 0 0"/>
-            <mass value="0.090983"/>
-            <inertia ixx="1e-06" iyy="0.001182" izz="0.001182" ixy="0" ixz="0" iyz="0"/>   
-        </inertial>
-        <visual>
-            <origin xyz="0 0 0" rpy="0 0 0"/>
-            <geometry>
-                <mesh filename="obj/toe-A-rod.obj"/>
-            </geometry>
-        </visual>
-        <collision>
-            <origin xyz="0.17 0 0" rpy="0.0698132 1.5708 0"/>
-            <geometry>
-                <capsule radius="0.007" length="0.17"/>
-            </geometry>
-        </collision>
-    </link>
-
     <link name="left-toe-B_link">
         <inertial>
             <origin xyz="0.005161 1e-06 -0.002248" rpy="0 0 0"/>
@@ -297,26 +257,6 @@
             </geometry>
             <material name="light-gray"/>
         </visual>
-    </link>
-
-    <link name="left-toe-B-rod_link">
-        <inertial>
-            <origin xyz="0.142991 0 0" rpy="0 0 0"/>
-            <mass value="0.079507"/>
-            <inertia ixx="1e-06" iyy="0.000768" izz="0.000768" ixy="0" ixz="0" iyz="0"/>   
-        </inertial>
-        <visual>
-            <origin xyz="0 0 0" rpy="0 0 0"/>
-            <geometry>
-                <mesh filename="obj/toe-B-rod.obj"/>
-            </geometry>
-        </visual>
-        <collision>
-            <origin xyz="0.144 0 0" rpy="0.0698132 1.5708 0"/>
-            <geometry>
-                <capsule radius="0.007" length="0.144"/>
-            </geometry>
-        </collision>
     </link>
 
     <link name="left-toe-pitch_link">
@@ -348,14 +288,72 @@
             <material name="light-gray"/>
         </visual>
         <collision>
-            <origin xyz="0 -0.0437 -0.0255" rpy="-1.0472 0 0"/>
+            <origin xyz="0 -0.0437 -0.0255" rpy="-1.0471975511965976 0.0 0.0"/>
             <geometry>
                 <box size="0.04 0.1175 0.0115"/>
             </geometry>
         </collision>
     </link>
 
-    <link name="left-foot_link"/>
+    <link name="left-foot_link">
+        <!-- Visual for Contact Points -->
+        <!-- <visual>
+            <origin xyz="0.05875 0.02 0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <sphere radius="1e-2"/>
+            </geometry>
+            <material name="black"/>
+        </visual>
+        <visual>
+            <origin xyz="0.05875 -0.02 0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <sphere radius="1e-2"/>
+            </geometry>
+            <material name="black"/>
+        </visual>
+        <visual>
+            <origin xyz="-0.05875 0.02 0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <sphere radius="1e-2"/>
+            </geometry>
+            <material name="black"/>
+        </visual>
+        <visual>
+            <origin xyz="-0.05875 -0.02 0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <sphere radius="1e-2"/>
+            </geometry>
+            <material name="black"/>
+        </visual> -->
+        <collision>
+            <origin xyz="0.05875 0.02 0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <sphere radius="1e-7"/>
+            </geometry>
+        </collision>
+        <collision>
+            <origin xyz="0.05875 -0.02 0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <sphere radius="1e-7"/>
+            </geometry>
+        </collision>
+        <collision>
+            <origin xyz="-0.05875 0.02 0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <sphere radius="1e-7"/>
+            </geometry>
+        </collision>
+        <collision>
+            <origin xyz="-0.05875 -0.02 0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <sphere radius="1e-7"/>
+            </geometry>
+        </collision>
+        <drake:proximity_properties>
+            <drake:mu_static value="0.8"/>
+            <drake:mu_dynamic value="0.6"/>
+        </drake:proximity_properties>
+    </link>
 
     <!-- Links: Left Arm -->
 
@@ -368,7 +366,7 @@
         <visual>
             <origin xyz="0 0 0" rpy="0 0 -0.279253"/>
             <geometry>
-                <mesh filename="obj/arm-L1.obj"/>
+                <mesh filename="obj/arm-l1.obj"/>
             </geometry>
             <material name="light-gray"/>
         </visual>
@@ -383,12 +381,12 @@
         <visual>
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>
-                <mesh filename="obj/arm-L2.obj"/>
+                <mesh filename="obj/arm-l2.obj"/>
             </geometry>
             <material name="medium-gray"/>
         </visual>
         <collision>
-            <origin xyz="0 -0.093 -0.1" rpy="1.5708 0 0"/>
+            <origin xyz="0 -0.093 -0.1" rpy="1.5707963267948966 -0.0 0.0"/>
             <geometry>
                 <cylinder radius="0.038" length="0.07"/>
             </geometry>
@@ -404,7 +402,7 @@
         <visual>
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>
-                <mesh filename="obj/arm-L3.obj"/>
+                <mesh filename="obj/arm-l3.obj"/>
             </geometry>
             <material name="medium-gray"/>
         </visual>
@@ -415,7 +413,7 @@
             </geometry>
         </collision>
         <collision>
-            <origin xyz="0 0.0035 0.185" rpy="1.5708 0 0.3926991"/>
+            <origin xyz="0 0.0035 0.185" rpy="1.5707963267948966 -0.3926990816987242 6.0084837121965e-17"/>
             <geometry>
                 <cylinder radius="0.03" length="0.04"/>
             </geometry>
@@ -431,12 +429,12 @@
         <visual>
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>
-                <mesh filename="obj/arm-L4.obj"/>
+                <mesh filename="obj/arm-l4.obj"/>
             </geometry>
             <material name="dark-gray"/>
         </visual>
         <collision>
-            <origin xyz="0.184 0.01 -0.026" rpy="2.96706 1.36136 -3.14159"/>
+            <origin xyz="0.184 0.01 -0.026" rpy="-2.4382108527989494 1.298989331809927 -2.456601192621911"/>
             <geometry>
                 <cylinder radius="0.013" length="0.1565"/>
             </geometry>
@@ -490,48 +488,28 @@
             <inertia ixx="0.011533" iyy="0.033345" izz="0.033958" ixy="0.000171" ixz="0.000148" iyz="-0.000178"/>
         </interial>
         <visual>
-            <origin xyz="0 0 0" rpy="0 0 -2.35619"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>
                 <mesh filename="obj/hip-pitch-xz.obj"/>
             </geometry>
             <material name="medium-gray"/>
         </visual>
         <collision>
-            <origin xyz="0 0 -0.04" rpy="-0 0 -0"/>
+            <origin xyz="0 0 -0.04" rpy="0 0 0"/>
             <geometry>
                 <cylinder radius="0.05" length="0.072"/>
             </geometry>
         </collision>
         <collision>
-            <origin xyz="0.12 0 -0.04" rpy="-0 0 -0"/>
+            <origin xyz="0.12 0 -0.04" rpy="0 0 0"/>
             <geometry>
                 <cylinder radius="0.05" length="0.072"/>
             </geometry>
         </collision>
         <collision>
-            <origin xyz="0.06 0 -0.04" rpy="-0 0 -0"/>
+            <origin xyz="0.06 0 -0.04" rpy="0 0 0"/>
             <geometry>
                 <box size="0.06 0.05 0.072"/>
-            </geometry>
-        </collision>
-    </link>
-
-    <link name="right-achilles-rod_link">
-        <interial>
-            <origin xyz="0.2506 0 0" rpy="0 0 0"/>
-            <mass value="0.178148"/>
-            <inertia ixx="3e-06" iyy="0.004501" izz="0.004501" ixy="0" ixz="0" iyz="0"/>
-        </interial>
-        <visual>
-            <origin xyz="0 0 0" rpy="0 0 0"/>
-            <geometry>
-                <mesh filename="obj/achilles-rod.obj"/>
-            </geometry>
-        </visual>
-        <collision>
-            <origin xyz="0.25 0 0" rpy="-0.0698132 1.5708 0"/>
-            <geometry>
-                <capsule radius="0.007" length="0.25"/>
             </geometry>
         </collision>
     </link>
@@ -565,13 +543,13 @@
             <material name="blue"/>
         </visual>
         <collision>
-            <origin xyz="0.23 0 0" rpy="0 1.5708 0"/>
+            <origin xyz="0.23 0 0" rpy="-0.0 1.5707963267948966 0.0"/>
             <geometry>
                 <cylinder radius="0.03" length="0.1715"/>
             </geometry>
         </collision>
         <collision>
-            <origin xyz="0.125 -0.009 0" rpy="-1.5708 1.46608 0"/>
+            <origin xyz="0.125 -0.009 0" rpy="-1.5707963267948968 5.551115123125783e-17 -1.466076571675237"/>
             <geometry>
                 <cylinder radius="0.05" length="0.1"/>
             </geometry>
@@ -592,13 +570,13 @@
             <material name="light-gray"/>
         </visual>
         <collision>
-            <origin xyz="0.21 0.03 0" rpy="0 1.5708 0"/>
+            <origin xyz="0.21 0.03 0" rpy="-0.0 1.5707963267948966 0.0"/>
             <geometry>
                 <capsule radius="0.02" length="0.18"/>
             </geometry>
         </collision>
         <collision>
-            <origin xyz="-0.07 0.012 0" rpy="-0.0872665 0 -1.13446"/>
+            <origin xyz="-0.07 0.012 0" rpy="-0.03695747152466595 -0.07907230157157948 -1.1330019296789948"/>
             <geometry>
                 <box size="0.007 0.07 0.03"/>
             </geometry>
@@ -635,26 +613,6 @@
         </visual>
     </link>
 
-    <link name="right-toe-A-rod_link">
-        <inertial>
-            <origin xyz="0.171071 0 0" rpy="0 0 0"/>
-            <mass value="0.090983"/>
-            <inertia ixx="1e-06" iyy="0.001182" izz="0.001182" ixy="0" ixz="0" iyz="0"/>   
-        </inertial>
-        <visual>
-            <origin xyz="0 0 0" rpy="0 0 0"/>
-            <geometry>
-                <mesh filename="obj/toe-a-rod-xz.obj"/>
-            </geometry>
-        </visual>
-        <collision>
-            <origin xyz="0.17 0 0" rpy="-0.0698132 1.5708 0"/>
-            <geometry>
-                <capsule radius="0.007" length="0.17"/>
-            </geometry>
-        </collision>
-    </link>
-
     <link name="right-toe-B_link">
         <inertial>
             <origin xyz="0.005161 -1e-06 -0.002248" rpy="0 0 0"/>
@@ -668,26 +626,6 @@
             </geometry>
             <material name="light-gray"/>
         </visual>
-    </link>
-
-    <link name="right-toe-B-rod_link">
-        <inertial>
-            <origin xyz="0.142991 0 0" rpy="0 0 0"/>
-            <mass value="0.079507"/>
-            <inertia ixx="1e-06" iyy="0.000768" izz="0.000768" ixy="0" ixz="0" iyz="0"/>   
-        </inertial>
-        <visual>
-            <origin xyz="0 0 0" rpy="0 0 0"/>
-            <geometry>
-                <mesh filename="obj/toe-B-rod-xz.obj"/>
-            </geometry>
-        </visual>
-        <collision>
-            <origin xyz="0.144 0 0" rpy="-0.0698132 1.5708 0"/>
-            <geometry>
-                <capsule radius="0.007" length="0.144"/>
-            </geometry>
-        </collision>
     </link>
 
     <link name="right-toe-pitch_link">
@@ -719,14 +657,72 @@
             <material name="light-gray"/>
         </visual>
         <collision>
-            <origin xyz="0 0.0437 -0.0255" rpy="1.0472 0 0"/>
+            <origin xyz="0 0.0437 -0.0255" rpy="1.0471975511965976 -0.0 0.0"/>
             <geometry>
                 <box size="0.04 0.1175 0.0115"/>
             </geometry>
         </collision>
     </link>
 
-    <link name="right-foot_link"/>
+    <link name="right-foot_link">
+        <!-- Visual for Contact Points -->
+        <!-- <visual>
+            <origin xyz="0.05875 0.02 0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <sphere radius="1e-2"/>
+            </geometry>
+            <material name="black"/>
+        </visual>
+        <visual>
+            <origin xyz="0.05875 -0.02 0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <sphere radius="1e-2"/>
+            </geometry>
+            <material name="black"/>
+        </visual>
+        <visual>
+            <origin xyz="-0.05875 0.02 0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <sphere radius="1e-2"/>
+            </geometry>
+            <material name="black"/>
+        </visual>
+        <visual>
+            <origin xyz="-0.05875 -0.02 0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <sphere radius="1e-2"/>
+            </geometry>
+            <material name="black"/>
+        </visual> -->
+        <collision>
+            <origin xyz="0.05875 0.02 0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <sphere radius="1e-7"/>
+            </geometry>
+        </collision>
+        <collision>
+            <origin xyz="0.05875 -0.02 0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <sphere radius="1e-7"/>
+            </geometry>
+        </collision>
+        <collision>
+            <origin xyz="-0.05875 0.02 0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <sphere radius="1e-7"/>
+            </geometry>
+        </collision>
+        <collision>
+            <origin xyz="-0.05875 -0.02 0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <sphere radius="1e-7"/>
+            </geometry>
+        </collision>
+        <drake:proximity_properties>
+            <drake:mu_static value="0.8"/>
+            <drake:mu_dynamic value="0.6"/>
+        </drake:proximity_properties>
+    </link>
 
     <!-- Links: Right Arm -->
 
@@ -737,9 +733,9 @@
             <inertia ixx="0.000704" iyy="0.00075" izz="0.000298" ixy="-1.4e-05" ixz="1.2e-05" iyz="-3.5e-05"/>   
         </inertial>
         <visual>
-            <origin xyz="0 0 0" rpy="0 0 0.279253"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>
-                <mesh filename="obj/arm-L1-xz.obj"/>
+                <mesh filename="obj/arm-l1-xz.obj"/>
             </geometry>
             <material name="light-gray"/>
         </visual>
@@ -754,12 +750,12 @@
         <visual>
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>
-                <mesh filename="obj/arm-L2-xz.obj"/>
+                <mesh filename="obj/arm-l2-xz.obj"/>
             </geometry>
             <material name="medium-gray"/>
         </visual>
         <collision>
-            <origin xyz="0 0.093 -0.1" rpy="-1.5708 0 0"/>
+            <origin xyz="0 0.093 -0.1" rpy="-1.5707963267948966 0.0 0.0"/>
             <geometry>
                 <cylinder radius="0.038" length="0.07"/>
             </geometry>
@@ -775,7 +771,7 @@
         <visual>
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>
-                <mesh filename="obj/arm-L3-xz.obj"/>
+                <mesh filename="obj/arm-l3-xz.obj"/>
             </geometry>
             <material name="medium-gray"/>
         </visual>
@@ -786,7 +782,7 @@
             </geometry>
         </collision>
         <collision>
-            <origin xyz="0 -0.0035 0.185" rpy="-1.5708 0 -0.3926991"/>
+            <origin xyz="0 -0.0035 0.185" rpy="-1.5707963267948966 -0.3926990816987242 -6.0084837121965e-17"/>
             <geometry>
                 <cylinder radius="0.03" length="0.04"/>
             </geometry>
@@ -802,12 +798,12 @@
         <visual>
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <geometry>
-                <mesh filename="obj/arm-L4-xz.obj"/>
+                <mesh filename="obj/arm-l4-xz.obj"/>
             </geometry>
             <material name="dark-gray"/>
         </visual>
         <collision>
-            <origin xyz="0.184 -0.01 -0.026" rpy="-2.96706 1.36136 3.14159"/>
+            <origin xyz="0.184 -0.01 -0.026" rpy="2.4382108527989494 1.298989331809927 2.456601192621911"/>
             <geometry>
                 <cylinder radius="0.013" length="0.1565"/>
             </geometry>
@@ -825,7 +821,7 @@
     <!-- Base Joint: -->
 
     <joint name="base_joint" type="floating">
-        <origin xyz="0 0 0" rpy="-0 0 -0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="world"/>
         <child link="base_link"/>
     </joint>
@@ -833,8 +829,7 @@
     <!-- Joints: Left Leg -->
 
     <joint name="left-hip-roll_joint" type="revolute">
-        <!-- Original has r as 0.3752458 (May effect Nominal Position) -->
-        <origin xyz="-0.001 0.091 0" rpy="0 -1.5708 0"/>
+        <origin xyz="-0.001 0.091 0" rpy="1.570796326794897 -1.1955505376161157 -1.570796326794897"/>
         <parent link="base_link"/>
         <child link="left-hip-roll_link"/>
         <axis xyz='0 0 1'/>
@@ -843,7 +838,7 @@
     </joint>
 
     <joint name="left-hip-yaw_joint" type="revolute">
-        <origin xyz="-0.0505 0 0.044" rpy="0 -1.5708 0"/>
+        <origin xyz="-0.0505 0 0.044" rpy="0.0 -1.5707963267948966 0.0"/>
         <parent link="left-hip-roll_link"/>
         <child link="left-hip-yaw_link"/>
         <axis xyz='0 0 1'/>
@@ -852,7 +847,7 @@
     </joint>
 
     <joint name="left-hip-pitch_joint" type="revolute">
-        <origin xyz="0 0.004 0.068" rpy="1.5708 0 0"/>
+        <origin xyz="0 0.004 0.068" rpy="-1.5707963267948966 -0.7853981633974483 3.141592653589793"/>
         <parent link="left-hip-yaw_link"/>
         <child link="left-hip-pitch_link"/>
         <axis xyz='0 0 -1'/>
@@ -860,17 +855,8 @@
         <dynamics friction="0.5" damping="1"/>
     </joint>
 
-    <drake:joint name="left-achilles-rod_joint" type="ball">
-        <origin xyz="0 0 0.046" rpy="0.07138397 0.0008726646 -1.4358824"/>
-        <parent link="left-hip-pitch_link"/>
-        <child link="left-achilles-rod_link"/>
-        <axis xyz='0 0 1'/>
-        <dynamics friction="0" damping="0.01"/>
-    </drake:joint>
-
     <joint name="left-knee_joint" type="revolute">
-        <!-- Custom Tuned: -->
-        <origin xyz="-0.085 0.085 0.0045" rpy="0 0 0.785398"/>
+        <origin xyz="0.12 0 0.0045" rpy="0.0 0.0 -1.5707963267948966"/>
         <parent link="left-hip-pitch_link"/>
         <child link="left-knee_link"/>
         <axis xyz='0 0 1'/>
@@ -878,7 +864,7 @@
         <dynamics friction="0.5" damping="1"/>
     </joint>
 
-    <joint name="left-shin_joint" type="continuous">
+    <joint name="left-shin_joint" type="fixed">
         <origin xyz="0.060677 0.047406 0" rpy="0 0 0"/>
         <parent link="left-knee_link"/>
         <child link="left-shin_link"/>
@@ -886,7 +872,7 @@
     </joint>
     
     <joint name="left-tarsus_joint" type="revolute">
-        <origin xyz="0.434759 0.02 0" rpy="0 0 1.79769"/>
+        <origin xyz="0.434759 0.02 0" rpy="0.0 -0.0 1.7976891295541595"/>
         <parent link="left-shin_link"/>
         <child link="left-tarsus_link"/>
         <axis xyz='0 0 1'/>
@@ -895,7 +881,7 @@
     </joint>
 
     <joint name="left-heel-spring_joint" type="revolute">
-        <origin xyz="-0.01766 -0.029456 0.00104" rpy="0.07801622 0.005585054 2.719223"/>
+        <origin xyz="-0.01766 -0.029456 0.00104" rpy="-0.06890726319112118 -0.03703539652316154 2.720717602917085"/>
         <parent link="left-tarsus_link"/>
         <child link="left-heel-spring_link"/>
         <axis xyz='0 0 1'/>
@@ -905,7 +891,7 @@
     </joint>
 
     <joint name="left-toe-A_joint" type="revolute">
-        <origin xyz="0.059 -0.034 -0.0276" rpy="-3.14159 0 1.5526449"/>
+        <origin xyz="0.059 -0.034 -0.0276" rpy="-3.141592653589793 1.2244450599234578e-16 -1.5526449025741558"/>
         <parent link="left-tarsus_link"/>
         <child link="left-toe-A_link"/>
         <axis xyz='0 0 1'/>
@@ -913,16 +899,8 @@
         <dynamics friction="1" damping="1"/>
     </joint>
 
-    <drake:joint name="left-toe-A-rod_joint" type="ball">
-        <origin xyz="0.057 0 -0.008" rpy="0.005934119 0.03735005 -1.5437437"/>
-        <parent link="left-toe-A_link"/>
-        <child link="left-toe-A-rod_link"/>
-        <axis xyz='0 0 1'/>
-        <dynamics friction="0" damping="0.01"/>
-    </drake:joint>
-
     <joint name="left-toe-B_joint" type="revolute">
-        <origin xyz="0.111 -0.034 0.0276" rpy="0 0 -1.5526449"/>
+        <origin xyz="0.111 -0.034 0.0276" rpy="0.0 0.0 -1.5526449025741558"/>
         <parent link="left-tarsus_link"/>
         <child link="left-toe-B_link"/>
         <axis xyz='0 0 1'/>
@@ -930,16 +908,8 @@
         <dynamics friction="1" damping="1"/>
     </joint>
 
-    <drake:joint name="left-toe-B-rod_joint" type="ball">
-        <origin xyz="0.057 0 -0.008" rpy="-0.0038397244 -0.05375614 1.5418239"/>
-        <parent link="left-toe-B_link"/>
-        <child link="left-toe-B-rod_link"/>
-        <axis xyz='0 0 1'/>
-        <dynamics friction="0" damping="0.01"/>
-    </drake:joint>
-
     <joint name="left-toe-pitch_joint" type="revolute">
-        <origin xyz="0.408 -0.04 0" rpy="0 0 1.2522737"/>
+        <origin xyz="0.408 -0.04 0" rpy="0.0 -0.0 1.2522737383059317"/>
         <parent link="left-tarsus_link"/>
         <child link="left-toe-pitch_link"/>
         <axis xyz='0 0 1'/>
@@ -948,7 +918,7 @@
     </joint>
 
     <joint name="left-toe-roll_joint" type="revolute">
-        <origin xyz="0 0 0" rpy="0 1.5708 0"/>
+        <origin xyz="0 0 0" rpy="-0.0 1.5707963267948966 0.0"/>
         <parent link="left-toe-pitch_link"/>
         <child link="left-toe-roll_link"/>
         <axis xyz='0 0 1'/>
@@ -957,7 +927,7 @@
     </joint>
 
     <joint name="left-foot_joint" type="fixed">
-        <origin xyz="0 -0.05456 -0.0315" rpy="-1.0472 0 -1.5708"/>
+        <origin xyz="0 -0.05456 -0.0315" rpy="-4.440892098500625e-16 -1.0471975511965976 -1.5707963267948961"/>
         <parent link="left-toe-roll_link"/>
         <child link="left-foot_link"/>
     </joint>
@@ -965,7 +935,7 @@
     <!-- Joints: Left Arm -->
 
     <joint name="left-shoulder-roll_joint" type="revolute">
-        <origin xyz="-0.001 0.12 0.4" rpy="-0.174533 -1.5708 0"/>
+        <origin xyz="-0.001 0.12 0.4" rpy="-1.5707963267948954 -1.3962634015954636 1.5707963267948954"/>
         <parent link="base_link"/>
         <child link="left-shoulder-roll_link"/>
         <axis xyz='0 0 1'/>
@@ -974,7 +944,7 @@
     </joint>
 
     <joint name="left-shoulder-pitch_joint" type="revolute">
-        <origin xyz="-0.00317 -0.011055 0.0555" rpy="1.5708 0 -0.279253"/>
+        <origin xyz="-0.00317 -0.011055 0.0555" rpy="1.5707963267948966 0.7853981633974485 -0.2792526803190933"/>
         <parent link="left-shoulder-roll_link"/>
         <child link="left-shoulder-pitch_link"/>
         <axis xyz='0 0 -1'/>
@@ -983,7 +953,7 @@
     </joint>
 
     <joint name="left-shoulder-yaw_joint" type="revolute">
-        <origin xyz="0 -0.165 -0.1" rpy="1.5708 0 0"/>
+        <origin xyz="0 -0.165 -0.1" rpy="1.5707963267948966 -0.0 0.0"/>
         <parent link="left-shoulder-pitch_link"/>
         <child link="left-shoulder-yaw_link"/>
         <axis xyz='0 0 1'/>
@@ -992,7 +962,7 @@
     </joint>
 
     <joint name="left-elbow_joint" type="revolute">
-        <origin xyz="0 -0.0385 0.185" rpy="1.5708 0 0"/>
+        <origin xyz="0 -0.0385 0.185" rpy="1.5707963267948966 -0.3926990816987242 6.0084837121965e-17"/>
         <parent link="left-shoulder-yaw_link"/>
         <child link="left-elbow_link"/>
         <axis xyz='0 0 1'/>
@@ -1001,7 +971,7 @@
     </joint>
 
     <joint name="left-hand_joint" type="fixed">
-        <origin xyz="0.369 0 -0.07912" rpy="1.5708 0 -0.174533"/>
+        <origin xyz="0.369 0 -0.07912" rpy="1.5707963267948963 0.17453292519943295 -4.2275625162475e-17"/>
         <parent link="left-elbow_link"/>
         <child link="left-hand_link"/>
     </joint>
@@ -1009,7 +979,7 @@
     <!-- Joints: Right Leg -->
 
     <joint name="right-hip-roll_joint" type="revolute">
-        <origin xyz="-0.001 -0.091 0" rpy="0 -1.5708 0"/>
+        <origin xyz="-0.001 -0.091 0" rpy="-1.570796326794897 -1.1955505376161157 1.570796326794897"/>
         <parent link="base_link"/>
         <child link="right-hip-roll_link"/>
         <axis xyz='0 0 1'/>
@@ -1018,7 +988,7 @@
     </joint>    
 
     <joint name="right-hip-yaw_joint" type="revolute">
-        <origin xyz="-0.0505 0 0.044" rpy="0 -1.5708 0"/>
+        <origin xyz="-0.0505 0 0.044" rpy="0.0 -1.5707963267948966 0.0"/>
         <parent link="right-hip-roll_link"/>
         <child link="right-hip-yaw_link"/>
         <axis xyz='0 0 1'/>
@@ -1027,7 +997,7 @@
     </joint>
 
     <joint name="right-hip-pitch_joint" type="revolute">
-        <origin xyz="0 -0.004 0.068" rpy="-1.5708 0 0"/>
+        <origin xyz="0 -0.004 0.068" rpy="1.5707963267948966 -0.7853981633974483 -3.141592653589793"/>
         <parent link="right-hip-yaw_link"/>
         <child link="right-hip-pitch_link"/>
         <axis xyz='0 0 -1'/>
@@ -1035,16 +1005,8 @@
         <dynamics friction="0.5" damping="1"/>
     </joint>
 
-    <drake:joint name="right-achilles-rod_joint" type="ball">
-        <origin xyz="0 0 0.046" rpy="-0.07138397 0.0008726646 1.4358824"/>
-        <parent link="right-hip-pitch_link"/>
-        <child link="right-achilles-rod_link"/>
-        <axis xyz='0 0 1'/>
-        <dynamics friction="0" damping="0.01"/>
-    </drake:joint>
-
     <joint name="right-knee_joint" type="revolute">
-        <origin xyz="-0.085 -0.085 0.0045" rpy="0 0 -0.785398"/>
+        <origin xyz="0.12 0 0.0045" rpy="0.0 -0.0 1.5707963267948966"/>
         <parent link="right-hip-pitch_link"/>
         <child link="right-knee_link"/>
         <axis xyz='0 0 1'/>
@@ -1052,7 +1014,7 @@
         <dynamics friction="0.5" damping="1"/>
     </joint>
 
-    <joint name="right-shin_joint" type="continuous">
+    <joint name="right-shin_joint" type="fixed">
         <origin xyz="0.060677 -0.047406 0" rpy="0 0 0"/>
         <parent link="right-knee_link"/>
         <child link="right-shin_link"/>
@@ -1060,7 +1022,7 @@
     </joint>
 
     <joint name="right-tarsus_joint" type="revolute">
-        <origin xyz="0.434759 -0.02 0" rpy="0 0 -1.79769"/>
+        <origin xyz="0.434759 -0.02 0" rpy="0.0 0.0 -1.7976891295541595"/>
         <parent link="right-shin_link"/>
         <child link="right-tarsus_link"/>
         <axis xyz='0 0 1'/>
@@ -1069,7 +1031,7 @@
     </joint>
 
     <joint name="right-heel-spring_joint" type="revolute">
-        <origin xyz="-0.01766 0.029456 0.00104" rpy="-0.07801622 0.005585054 -2.719223"/>
+        <origin xyz="-0.01766 0.029456 0.00104" rpy="0.06890726319112118 -0.03703539652316154 -2.720717602917085"/>
         <parent link="right-tarsus_link"/>
         <child link="right-heel-spring_link"/>
         <axis xyz='0 0 1'/>
@@ -1079,7 +1041,7 @@
     </joint>
 
     <joint name="right-toe-A_joint" type="revolute">
-        <origin xyz="0.059 0.034 -0.0276" rpy="3.14159 0 -1.5526449"/>
+        <origin xyz="0.059 0.034 -0.0276" rpy="3.141592653589793 1.2244450599234578e-16 1.5526449025741558"/>
         <parent link="right-tarsus_link"/>
         <child link="right-toe-A_link"/>
         <axis xyz='0 0 1'/>
@@ -1087,16 +1049,8 @@
         <dynamics friction="1" damping="1"/>
     </joint>
 
-    <drake:joint name="right-toe-A-rod_joint" type="ball">
-        <origin xyz="0.057 0 -0.008" rpy="-0.005934119 0.03735005 1.5437437"/>
-        <parent link="right-toe-A_link"/>
-        <child link="right-toe-A-rod_link"/>
-        <axis xyz='0 0 1'/>
-        <dynamics friction="0" damping="0.01"/>
-    </drake:joint>
-
     <joint name="right-toe-B_joint" type="revolute">
-        <origin xyz="0.111 0.034 0.0276" rpy="0 0 1.5526449"/>
+        <origin xyz="0.111 0.034 0.0276" rpy="0.0 -0.0 1.5526449025741558"/>
         <parent link="right-tarsus_link"/>
         <child link="right-toe-B_link"/>
         <axis xyz='0 0 1'/>
@@ -1104,16 +1058,8 @@
         <dynamics friction="1" damping="1"/>
     </joint>
 
-    <drake:joint name="right-toe-B-rod_joint" type="ball">
-        <origin xyz="0.057 0 -0.008" rpy="0.0038397244 -0.05375614 -1.5418239"/>
-        <parent link="right-toe-B_link"/>
-        <child link="right-toe-B-rod_link"/>
-        <axis xyz='0 0 1'/>
-        <dynamics friction="0" damping="0.01"/>
-    </drake:joint>
-
     <joint name="right-toe-pitch_joint" type="revolute">
-        <origin xyz="0.408 0.04 0" rpy="0 0 -1.2522737"/>
+        <origin xyz="0.408 0.04 0" rpy="0.0 0.0 -1.2522737383059317"/>
         <parent link="right-tarsus_link"/>
         <child link="right-toe-pitch_link"/>
         <axis xyz='0 0 1'/>
@@ -1122,7 +1068,7 @@
     </joint>
 
     <joint name="right-toe-roll_joint" type="revolute">
-        <origin xyz="0 0 0" rpy="0 1.5708 0"/>
+        <origin xyz="0 0 0" rpy="-0.0 1.5707963267948966 0.0"/>
         <parent link="right-toe-pitch_link"/>
         <child link="right-toe-roll_link"/>
         <axis xyz='0 0 1'/>
@@ -1131,7 +1077,7 @@
     </joint>
 
     <joint name="right-foot_joint" type="fixed">
-        <origin xyz="0 0.05456 -0.0315" rpy="1.0472 0 1.5708"/>
+        <origin xyz="0 0.05456 -0.0315" rpy="4.440892098500625e-16 -1.0471975511965976 1.5707963267948961"/>
         <parent link="right-toe-roll_link"/>
         <child link="right-foot_link"/>
     </joint>
@@ -1139,7 +1085,7 @@
     <!-- Joints: Right Arm -->
 
     <joint name="right-shoulder-roll_joint" type="revolute">
-        <origin xyz="-0.001 -0.12 0.4" rpy="0.174533 -1.5708 0"/>
+        <origin xyz="-0.001 -0.12 0.4" rpy="1.5707963267948954 -1.3962634015954636 -1.5707963267948954"/>
         <parent link="base_link"/>
         <child link="right-shoulder-roll_link"/>
         <axis xyz='0 0 1'/>
@@ -1148,7 +1094,7 @@
     </joint>
 
     <joint name="right-shoulder-pitch_joint" type="revolute">
-        <origin xyz="-0.00317 0.011055 0.0555" rpy="-1.5708 0 0.279253"/>
+        <origin xyz="-0.00317 0.011055 0.0555" rpy="-1.5707963267948966 0.7853981633974485 0.2792526803190933"/>
         <parent link="right-shoulder-roll_link"/>
         <child link="right-shoulder-pitch_link"/>
         <axis xyz='0 0 -1'/>
@@ -1157,7 +1103,7 @@
     </joint>
 
     <joint name="right-shoulder-yaw_joint" type="revolute">
-        <origin xyz="0 0.165 -0.1" rpy="-1.5708 0 0"/>
+        <origin xyz="0 0.165 -0.1" rpy="-1.5707963267948966 0.0 0.0"/>
         <parent link="right-shoulder-pitch_link"/>
         <child link="right-shoulder-yaw_link"/>
         <axis xyz='0 0 1'/>
@@ -1166,7 +1112,7 @@
     </joint>
 
     <joint name="right-elbow_joint" type="revolute">
-        <origin xyz="0 0.0385 0.185" rpy="-1.5708 0 0"/>
+        <origin xyz="0 0.0385 0.185" rpy="-1.5707963267948966 -0.3926990816987242 -6.0084837121965e-17"/>
         <parent link="right-shoulder-yaw_link"/>
         <child link="right-elbow_link"/>
         <axis xyz='0 0 1'/>
@@ -1175,10 +1121,95 @@
     </joint>
 
     <joint name="right-hand_joint" type="fixed">
-        <origin xyz="0.369 0 -0.07912" rpy="-1.5708 0 0.174533"/>
+        <origin xyz="0.369 0 -0.07912" rpy="-1.5707963267948963 0.17453292519943295 4.2275625162475e-17"/>
         <parent link="right-elbow_link"/>
         <child link="right-hand_link"/>
     </joint>
+
+    <!-- Visual for Achilles Rod Points -->
+    <!-- <link name="right_achilles_hip">
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <mass value="0"/>
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>   
+        </inertial>
+        <visual>
+            <origin xyz="0.0 0.0 0.046" rpy="0 0 0"/>
+            <geometry>
+                <sphere radius="0.01"/>
+            </geometry>
+            <material name="blue"/>
+        </visual>
+    </link>
+
+    <joint name="right_achilles_hip_joint" type="fixed">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="right-hip-pitch_link"/>
+        <child link="right_achilles_hip"/>
+    </joint>
+
+    <link name="right_achilles_heel">
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <mass value="0"/>
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>   
+        </inertial>
+        <visual>
+            <origin xyz="0.113789 0.011056 0" rpy="0 0 0"/>
+            <geometry>
+                <sphere radius="0.01"/>
+            </geometry>
+            <material name="blue"/>
+        </visual>
+    </link>
+
+    <joint name="right_achilles_heel_joint" type="fixed">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="right-heel-spring_link"/>
+        <child link="right_achilles_heel"/>
+    </joint>
+
+    <link name="left_achilles_hip">
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <mass value="0"/>
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>   
+        </inertial>
+        <visual>
+            <origin xyz="0.0 0.0 0.046" rpy="0 0 0"/>
+            <geometry>
+                <sphere radius="0.01"/>
+            </geometry>
+            <material name="blue"/>
+        </visual>
+    </link>
+
+    <joint name="left_achilles_hip_joint" type="fixed">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="left-hip-pitch_link"/>
+        <child link="left_achilles_hip"/>
+    </joint>
+
+    <link name="left_achilles_heel">
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <mass value="0"/>
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>   
+        </inertial>
+        <visual>
+            <origin xyz="0.113789 -0.011056 0" rpy="0 0 0"/>
+            <geometry>
+                <sphere radius="0.01"/>
+            </geometry>
+            <material name="blue"/>
+        </visual>
+    </link>
+
+    <joint name="left_achilles_heel_joint" type="fixed">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="left-heel-spring_link"/>
+        <child link="left_achilles_heel"/>
+    </joint> -->
 
     <!-- Actuators: -->
 
@@ -1232,15 +1263,15 @@
         </actuator>
     </transmission>
 
-    <trbnsmission nbme="left-toe-B">
-        <type>trbnsmission_interfbce/SimpleTrbnsmission</type>
-        <joint nbme="left-toe-B_joint">
-            <hbrdwbreInterfbce>hbrdwbre_interfbce/PositionJointInterfbce</hbrdwbreInterfbce>
+    <transmission name="left-toe-B">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="left-toe-B_joint">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
         </joint>
-        <bctubtor nbme="left-toe-B_motor">
-            <mechbnicblReduction>1.0</mechbnicblReduction>
-        </bctubtor>
-    </trbnsmission>
+        <actuator name="left-toe-B_motor">
+            <mechanicalReduction>1.0</mechanicalReduction>
+        </actuator>
+    </transmission>
 
     <transmission name="left-shoulder-roll">
         <type>transmission_interface/SimpleTransmission</type>
@@ -1332,15 +1363,15 @@
         </actuator>
     </transmission>
 
-    <trbnsmission nbme="right-toe-B">
-        <type>trbnsmission_interfbce/SimpleTrbnsmission</type>
-        <joint nbme="right-toe-B_joint">
-            <hbrdwbreInterfbce>hbrdwbre_interfbce/PositionJointInterfbce</hbrdwbreInterfbce>
+    <transmission name="right-toe-B">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="right-toe-B_joint">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
         </joint>
-        <bctubtor nbme="right-toe-B_motor">
-            <mechbnicblReduction>1.0</mechbnicblReduction>
-        </bctubtor>
-    </trbnsmission>
+        <actuator name="right-toe-B_motor">
+            <mechanicalReduction>1.0</mechanicalReduction>
+        </actuator>
+    </transmission>
 
     <transmission name="right-shoulder-roll">
         <type>transmission_interface/SimpleTransmission</type>
